@@ -1,26 +1,30 @@
-// 深拷贝对象
+/**
+ * 
+ * @param obj 深拷贝对象
+ * @returns 
+ */
 export function deepClone(obj: any): any {
   const _toString: Function = Object.prototype.toString
 
-  // 非对象类型
+  // // 非对象类型
   if (!obj || typeof obj !== 'object') {
     return obj
   }
 
-  // DOM Node
+  // // DOM Node
   if (obj.nodeType && 'cloneNode' in obj) {
     return obj.cloneNode(true)
   }
 
-  // Date
+  // // Date
   if (_toString.call(obj) === '[object Date]') {
     return new Date(obj.getTime())
   }
 
-  // RegExp
+  // // RegExp
   if (_toString.call(obj) === '[object RegExp]') {
     const flags = []
-    // 全局 多行 忽略大小写
+    // // 匹配方式：全局 多行 忽略大小写
     if (obj.global) {
       flags.push('g')
     }
@@ -34,7 +38,7 @@ export function deepClone(obj: any): any {
     return new RegExp(obj.source, flags.join(''))
   }
 
-  // 对象数组递归式复制
+  // // 对象数组递归式复制
   const result = Array.isArray(obj)
     ? []
     : obj.constructor
