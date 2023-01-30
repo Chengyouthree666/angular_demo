@@ -4,7 +4,7 @@
  * @returns 
  */
 export function deepClone(obj: any): any {
-  const _toString: Function = Object.prototype.toString
+  const _toString = Object.prototype.toString
 
   // // 非对象类型
   if (!obj || typeof obj !== 'object') {

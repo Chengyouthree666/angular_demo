@@ -24,4 +24,4 @@ import { TextInputModule } from 'ng-devui/text-input';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

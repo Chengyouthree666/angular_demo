@@ -1,9 +1,9 @@
 <input dTextInput placeholder="双向数据绑定" [(ngModel)]="username" />
-<b style="margin-left: 10px">hello {{username}}!</b>
+<b style="margin-left: 10px">hello {{ username }}!</b>
 <ul>
   <h4 style="padding: 0; margin: 5px 0">好友列表(循环渲染)</h4>
   <li *ngFor="let friend of friendList" class="friend-block">
-   <d-button (click)="call(friend)">{{friend.name}}</d-button>
+    <d-button (click)="call(friend)">{{ friend.name }}</d-button>
   </li>
 </ul>
 <div class="directive-box">
