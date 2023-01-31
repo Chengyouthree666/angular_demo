@@ -8,6 +8,7 @@ import {
   OnChanges,
   OnDestroy,
   OnInit,
+  SimpleChange,
 } from '@angular/core';
 import { Friend } from './types';
 
@@ -28,11 +29,18 @@ export class HomePageComponent
   OnDestroy {
 
   username: string = 'chengyouthree';
+  message: string = ''
   isActive: boolean = false;
   friendList: Friend[] = [];
 
   constructor() {
     console.log();
+  }
+
+  // 接受子组件的回应
+  receiveMsg(msg: string): void {
+    this.isActive = !this.isActive
+    this.message = msg
   }
 
   // // angular组件生命周期

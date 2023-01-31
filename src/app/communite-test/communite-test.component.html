@@ -1,0 +1,15 @@
+<p>
+  i got your name: 
+  <br>
+  previous name：{{beforeName}}
+  <br>
+  current name：{{username}}
+</p>
+<d-button (click)="callFather('calling')">呼叫父组件</d-button>
+<div class="communite-slot-wrapper">
+  <h3>组件投影-通信子组件（插槽）</h3>
+  <slot-component>
+    <b style="color: green">插槽内容【communite】</b>
+    <p>多插槽：定义select属性区分具名插槽，不定义则为默认插槽【select="[slot-name]"】</p>
+  </slot-component>
+</div>

@@ -5,3 +5,37 @@
 .red-text {
   color: rgb(255, 166, 0);
 }
+
+.sub-component {
+  border: 1px solid orangered;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.home-slot-wrapper {
+  border: 2px solid skyblue;
+  margin-top: 10px;
+}
+
+.advertisement-wrapper {
+
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  height: 100px;
+  width: 180px;
+  border: 2px solid rgba(0, 0, 0, .3);
+  padding: 2px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(148, 207, 246, 0.5), rgb(155, 244, 117));
+
+  .ad-title {
+    background-color: skyblue;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    padding: 2px 0;
+    margin: 0;
+    font-size: 14px;
+  }
+}
