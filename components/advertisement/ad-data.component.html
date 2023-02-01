@@ -1,0 +1,10 @@
+<div class="ad-info-wrapper">
+  <ul>
+    <li class="ad-company-name">
+      {{ data.company }}
+    </li>
+    <li *ngFor="let goodsItem of data.goods" class="ad-goods-item">
+      {{ goodsItem.name }} - {{ goodsItem.price }}
+    </li>
+  </ul>
+</div>

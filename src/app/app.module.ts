@@ -13,10 +13,20 @@ import { TextInputModule } from 'ng-devui/text-input';
 // 子组件注册
 import { CommuniteTestComponent } from './communite-test/communite-test.component';
 import { SlotComponentComponent } from './slot-component/slot-component.component';
-import { AdvertisementContent } from '../../components/advertisement/ad-content.component'
+import { AdvertisementComponent } from '../../components/advertisement/ad-content.component';
+import { AdDataComponent } from 'components/advertisement/ad-data.component';
+import { AdvertisementDirective } from 'components/advertisement/ad-directive.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePageComponent, CommuniteTestComponent, SlotComponentComponent, AdvertisementContent],
+  declarations: [
+    AppComponent,
+    HomePageComponent,
+    CommuniteTestComponent,
+    SlotComponentComponent,
+    AdvertisementComponent,
+    AdDataComponent,
+    AdvertisementDirective,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

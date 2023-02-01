@@ -7,23 +7,24 @@
   </li>
 </ul>
 <div class="directive-box">
-  <span [class.red-text]="isActive">动态class测试</span><br>
-  <span>子组件：{{message}}</span>
+  <span [class.red-text]="isActive">动态class测试</span><br />
+  <span>子组件：{{ message }}</span>
   <d-toggle [size]="'sm'" [(ngModel)]="isActive"></d-toggle>
   <span *ngIf="isActive"><<<（条件渲染）</span>
 </div>
 <div class="sub-component">
   <h3>子组件</h3>
-  <home-sub-component [username]="username" (call)="receiveMsg($event)"></home-sub-component>
+  <home-sub-component
+    [username]="username"
+    (call)="receiveMsg($event)"></home-sub-component>
 </div>
 <div class="home-slot-wrapper">
   <h3>组件投影-home（插槽）</h3>
   <slot-component>
-    <b style="color:rgb(120, 120, 9)">插槽内容【home】</b>
+    <b style="color: rgb(120, 120, 9)">插槽内容【home】</b>
   </slot-component>
 </div>
-<div class="advertisement-wrapper">
-  <h3 class="ad-title">广告牌</h3>
-  <!-- <ng-template advertisementWrapper></ng-template> -->
-  <advertisement-content></advertisement-content>
+<div class="advertisement-wrapper" (click)="adJump()" *ngIf="showAd">
+  <!-- 广告组件 -->
+  <advertisement-container [ads]="ads"></advertisement-container>
 </div>

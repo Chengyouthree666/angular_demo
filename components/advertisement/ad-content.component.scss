@@ -1,0 +1,34 @@
+.ad-title {
+  background-color: skyblue;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  padding: 2px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.ad-info-wrapper {
+  width: 80%;
+  margin: 0 auto;
+
+  & ul {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .ad-company-name {
+    color: rgb(177, 12, 12);
+    list-style: none;
+    font-weight: 700;
+  }
+
+  .ad-goods-item {
+    background-color: rgb(76, 74, 74);
+    color: #fff;
+    margin: 2px 0;
+    list-style: none;
+    text-align: center;
+    border-radius: 5px;
+  }
+}
